@@ -7,6 +7,11 @@ class UserService
     constructor: (@$log, @$http, @$q) ->
         @$log.debug "constructing UserService"
 
+        map = L.map("map").setView([
+          51.505
+          -0.09
+        ], 13)
+
     listUsers: () ->
         @$log.debug "listUsers()"
         deferred = @$q.defer()
